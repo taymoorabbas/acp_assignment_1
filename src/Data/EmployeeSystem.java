@@ -16,7 +16,7 @@ import java.io.*;
 
 public class EmployeeSystem {
 
-    public static final String FILE_NAME = "employees.txt";
+    public static final String FILE_NAME = "employeesFile.txt";
     private static final int MAX_SIZE = 10;
     private int count;
     private Employee[] employees;
