@@ -13,8 +13,8 @@ public abstract class NonAcademic extends Employee{
 
     public NonAcademic(){}
 
-    public NonAcademic(int id, int age, String name, float basicSalary, float hourlyRate) {
-        super(id, age, name, basicSalary);
+    public NonAcademic(int id, String name, int age, float basicSalary, float hourlyRate) {
+        super(id, name, age, basicSalary);
         this.hourlyRate = hourlyRate;
     }
 

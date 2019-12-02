@@ -13,8 +13,8 @@ public class Lecturer extends Academic{
 
     public Lecturer(){}
 
-    public Lecturer(int id, int age, String name, float basicSalary, float courseRate, int totalCourses) {
-        super(id, age, name, basicSalary, courseRate);
+    public Lecturer(int id, String name, int age, float basicSalary, float courseRate, int totalCourses) {
+        super(id, name, age, basicSalary, courseRate);
         this.totalCourses = totalCourses;
     }
 

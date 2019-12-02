@@ -13,8 +13,8 @@ public abstract class Academic extends Employee {
 
     public Academic(){}
 
-    public Academic(int id, int age, String name, float basicSalary, float courseRate) {
-        super(id, age, name, basicSalary);
+    public Academic(int id, String name, int age, float basicSalary, float courseRate) {
+        super(id, name, age, basicSalary);
         this.courseRate = courseRate;
     }
 

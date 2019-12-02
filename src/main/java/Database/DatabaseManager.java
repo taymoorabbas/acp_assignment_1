@@ -11,32 +11,21 @@ package Database;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.sql.Statement;
 
 public class DatabaseManager {
 
     private static Connection connection;
-    private static Statement statement;
 
     private static void createConnection(String databasePath) {
 
         try {
-            System.out.println("Requesting for connection. . .");
-            Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
-
-            connection = DriverManager.getConnection("jdbc:ucanaccess://" + databasePath);
-            statement = connection.createStatement();
-            System.out.println("Connection established");
+            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+            connection = DriverManager.getConnection(databasePath);
         }
         catch (ClassNotFoundException | SQLException e) {
             System.out.println(e);
             e.printStackTrace();
         }
-    }
-
-    public static Statement getStatement() {
-
-        return statement;
     }
 
     public static Connection getConnection(String databasePath) {
@@ -49,8 +38,6 @@ public class DatabaseManager {
 
         try {
             connection.close();
-            statement.close();
-            System.out.println("Connection closed");
         }
         catch (SQLException e) {
             e.printStackTrace();

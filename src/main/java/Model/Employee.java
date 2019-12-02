@@ -15,7 +15,7 @@ public abstract class Employee {
 
     public Employee() {}
 
-    public Employee(int id, int age, String name, float basicSalary) {
+    public Employee(int id, String name, int age, float basicSalary) {
         this.id = id;
         this.age = age;
         this.name = name;

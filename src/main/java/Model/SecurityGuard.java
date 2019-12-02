@@ -13,8 +13,8 @@ public class SecurityGuard extends NonAcademic {
 
     public SecurityGuard(){}
 
-    public SecurityGuard(int id, int age, String name, float basicSalary, float hourlyRate, int totalHours) {
-        super(id, age, name, basicSalary, hourlyRate);
+    public SecurityGuard(int id, String name, int age, float basicSalary, float hourlyRate, int totalHours) {
+        super(id, name, age, basicSalary, hourlyRate);
         this.totalHours = totalHours;
     }
 
