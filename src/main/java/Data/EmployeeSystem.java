@@ -84,7 +84,6 @@ public class EmployeeSystem {
 
             return;
         }
-
         if(EmployeeDbManager.deleteEmployee(id)){
 
             System.out.println("Record with ID: " + id + " deleted successfully");
@@ -134,8 +133,6 @@ public class EmployeeSystem {
         ArrayList<Lecturer> lecturers = EmployeeDbManager.getAllLecturer();
 
         if(lecturers != null){
-
-            System.out.println("Lecturers\n" + "---------");
             showLabels(true);
 
             for (Lecturer lecturer : lecturers) {
@@ -152,8 +149,6 @@ public class EmployeeSystem {
         ArrayList<SecurityGuard> securityGuards = EmployeeDbManager.getAllSecurityGuard();
 
         if(securityGuards != null){
-
-            System.out.println("Security guards\n" + "---------------");
             showLabels(false);
 
             for (SecurityGuard securityGuard : securityGuards){
@@ -430,11 +425,13 @@ public class EmployeeSystem {
     private static void showLabels(boolean isLecturer){
 
         if(isLecturer){
+            System.out.println("Lecturer(s)\n" + "-----------");
             System.out.format("%-10s%-30s%-10s%-20s%-20s%-20s",
                     "id", "name", "age", "basic salary", "course rate", "total courses");
             System.out.println();
         }
         else{
+            System.out.println("Security guard(s)\n" + "-----------------");
             System.out.format("%-10s%-30s%-10s%-20s%-20s%-20s",
                     "id", "name", "age", "basic salary", "hourly rate", "total hours");
             System.out.println();
